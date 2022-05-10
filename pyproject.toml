@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pm_automata_tesztelo_hazik"
+version = "0.1.0"
+description = ""
+authors = ["Felber Péter (Eff) <effpeter@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "3.141.0"
+webdriver-manager = "^3.5.4"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+pytest = "^7.1.2"
+allure-pytest = "^2.9.45"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+    ]
+addopts = "--capture=no --alluredir=allure-results -s"
+
